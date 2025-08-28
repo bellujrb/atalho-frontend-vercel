@@ -17,7 +17,7 @@ export function setGlobalTokenGetter(getToken: () => Promise<string | null>) {
 }
 
 export async function getAuthHeaders(): Promise<Record<string, string>> {
-    try {
+  try {
     if (globalGetToken) {
       const token = await globalGetToken();
       if (token) {
@@ -28,6 +28,7 @@ export async function getAuthHeaders(): Promise<Record<string, string>> {
     }
     return {};
   } catch (error) {
+    console.error('Erro ao obter headers de autenticação:', error);
     return {};
   }
 }
@@ -40,11 +41,13 @@ api.interceptors.request.use(
         config.headers.Authorization = authHeaders.Authorization;
       }
     } catch (error) {
-      throw error;
+      console.error('Erro no interceptor de requisição:', error);
+      // Não rejeitar a requisição, apenas logar o erro
     }
     return config;
   },
   (error: any) => {
+    console.error('Erro no interceptor de requisição:', error);
     return Promise.reject(error);
   }
 );
@@ -54,6 +57,7 @@ api.interceptors.response.use(
     return response;
   },
   async (error: any) => {
+    console.error('Erro no interceptor de resposta:', error);
     return Promise.reject(error);
   }
 );

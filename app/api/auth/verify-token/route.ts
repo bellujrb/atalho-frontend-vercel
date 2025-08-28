@@ -3,6 +3,7 @@ import { API_CONFIG } from '@/config/api.config'
 
 export async function POST(request: NextRequest) {
   try {
+    // Aguardar a resolução dos headers
     const authHeader = request.headers.get('authorization')
     
     if (!authHeader) {
