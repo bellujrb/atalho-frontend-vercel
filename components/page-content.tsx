@@ -13,6 +13,7 @@ import { chatService } from "@/services/chat.service"
 import { useSelectedCompany } from "@/hooks/companies/use-selected-company"
 import { toast } from "@/components/ui/use-toast"
 import { AppLayoutSkeleton } from "@/components/skeletons/app-layout-skeleton"
+import { AuthDebug } from "@/components/auth-debug"
 
 export function PageContent() {
   const [showBetaBanner, setShowBetaBanner] = useState(true)
@@ -222,6 +223,11 @@ export function PageContent() {
                 </div>
               </div>
             )}
+          </div>
+
+          {/* Auth Debug Component - Temporary */}
+          <div className="w-full max-w-4xl px-4">
+            <AuthDebug />
           </div>
         </div>
       </div>
