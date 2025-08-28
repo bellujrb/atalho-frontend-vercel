@@ -1,0 +1,1 @@
+export { useSelectedCompany } from '@/contexts/app-context';

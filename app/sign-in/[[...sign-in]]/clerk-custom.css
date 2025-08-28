@@ -1,0 +1,39 @@
+.cl-formButtonPrimary {
+  background: #10b981 !important;
+  color: white !important;
+  border: none !important;
+}
+
+.cl-formButtonPrimary:hover {
+  background: #059669 !important;
+}
+
+.cl-formButtonSecondary {
+  background: #10b981 !important;
+  color: white !important;
+  border: none !important;
+}
+
+.cl-formButtonSecondary:hover {
+  background: #059669 !important;
+}
+
+.cl-alternativeMethodsBlockButton.cl-button.cl-internal-zk1gfl {
+  background: #10b981 !important;
+  color: white !important;
+  border: none !important;
+}
+
+.cl-alternativeMethodsBlockButton.cl-button.cl-internal-zk1gfl:hover {
+  background: #059669 !important;
+}
+
+.cl-formButton {
+  background: #10b981 !important;
+  color: white !important;
+  border: none !important;
+}
+
+.cl-formButton:hover {
+  background: #059669 !important;
+}
