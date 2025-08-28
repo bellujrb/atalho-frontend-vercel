@@ -2,9 +2,9 @@
 
 import { Toaster as Sonner, type ToasterProps } from "sonner"
 
-type ToasterProps = Omit<ToasterProps, "theme">
+type CustomToasterProps = Omit<ToasterProps, "theme">
 
-export function Toaster({ ...props }: ToasterProps) {
+export function Toaster({ ...props }: CustomToasterProps) {
   return (
     <Sonner
       className="toaster group"
